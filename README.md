@@ -1,41 +1,25 @@
-# Object detection using deep learning with OpenCV and Python 
+#### Original Code Modified from 
+Author: Matthew Davis
+This is a working project to create a people and object counters using Yolo
 
-OpenCV `dnn` module supports running inference on pre-trained deep learning models from popular frameworks like Caffe, Torch and TensorFlow. 
+#### To use this system:
+This will setup and install yolo to access a laptop web cam, and count people.  The weights have not been
+included in the repo and need to downloaded seperately (using the instructions bellow)
 
-When it comes to object detection, popular detection frameworks are
- * YOLO
- * SSD
- * Faster R-CNN
- 
- Support for running YOLO/DarkNet has been added to OpenCV dnn module recently. 
- 
- ## Dependencies
-  * opencv
-  * numpy
-  
-`pip install numpy opencv-python`
+#### Setup 
+run the following commands in order
 
- ## YOLO (You Only Look Once)
- 
- Download the pre-trained YOLO v3 weights file from this [link](https://pjreddie.com/media/files/yolov3.weights) and place it in the current directory or you can directly download to the current directory in terminal using
- 
- `$ wget https://pjreddie.com/media/files/yolov3.weights`
- 
- Provided all the files are in the current directory, below command will apply object detection on the input image `dog.jpg`.
- 
- `$ python yolo_opencv.py --image dog.jpg --config yolov3.cfg --weights yolov3.weights --classes yolov3.txt`
- 
- 
- **Command format** 
- 
- _$ python yolo_opencv.py --image /path/to/input/image --config /path/to/config/file --weights /path/to/weights/file --classes /path/to/classes/file_
- 
- Checkout the [blog post](http://www.arunponnusamy.com/yolo-object-detection-opencv-python.html) to learn more.
- 
- ### sample output :
- ![](object-detection.jpg)
- 
-Checkout the object detection implementation available in [cvlib](http:cvlib.net) which enables detecting common objects in the context through a single function call `detect_common_objects()`.
- 
- 
- (_SSD and Faster R-CNN examples will be added soon_)
+* pip install -r requirements.txt
+* python get_weights.py
+* python test_webcam.py 
+* python test_yolo.py
+* python yolo_webcam.py
+
+ click 'q' to quit
+
+##### Sepcial Thanks 
+ Author of test_yolo.py, Arun Ponnusamy with repository at 
+https://github.com/arunponnusamy/object-detection-opencv.git
+
+
+
