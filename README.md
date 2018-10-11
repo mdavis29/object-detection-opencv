@@ -1,6 +1,8 @@
-#### Original Code Modified from 
+#### OpenCV Yolo Webcam objected Detection 
+
 Author: Matthew Davis
 This is a working project to create a people and object counters using Yolo
+
 
 #### To use this system:
 This will setup and install yolo to access a laptop web cam, and count people.  The weights have not been
